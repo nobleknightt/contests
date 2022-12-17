@@ -520,7 +520,7 @@ def fetch_contests(
     code_jam: bool=False, geeksforgeeks: bool=False, hackerearth: bool=False,
     hash_code: bool=False, kick_start: bool=False, leetcode: bool=False
 ) -> list[ContestData]:
-    return [
+    return sorted([
         *(fetch_atcoder_contests() if atcoder else []), 
         *(fetch_codechef_contests() if codechef else []), 
         *(fetch_codeforces_contests() if codeforces else []), 
@@ -530,7 +530,7 @@ def fetch_contests(
         *(fetch_hash_code_contests() if hash_code else []), 
         *(fetch_kick_start_contests() if kick_start else []), 
         *(fetch_leetcode_contests() if leetcode else [])
-    ]
+    ], key=lambda contest: contest.start_time)
 
 def main():
 
@@ -611,7 +611,7 @@ def main():
     webpage_content_contest_table       = [
         """
             <div class="m-2">
-                <table class="table table-success table-striped table-bordered ">
+                <table class="table table-bordered ">
                     <tr>
                         <th>Platform</th>
                         <th>Title</th>
