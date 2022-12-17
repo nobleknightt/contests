@@ -5,7 +5,7 @@ on:
     - cron: '0 0 * * *' # run everyday 12 am
 
 jobs:
-  install-and-run:
+  update-webpage-and-commit-changes:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
