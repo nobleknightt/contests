@@ -2,7 +2,7 @@ name: update-webpage-everyday
 
 on:
   schedule:
-    - cron: '30 20 * * *'
+    - cron: '45 20 * * *'
 
 jobs:
   install-and-run:
