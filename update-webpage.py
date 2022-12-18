@@ -569,6 +569,15 @@ def main():
         </head>
 
         <body style="color: #F3EFE0;">
+
+            <h1 class="text-center fw-bold"> Contests </h1>
+            
+            <div style="color: #F3EFE0;" class="d-flex justify-content-center">
+                <p class="pe-2"> <a href="https://github.com/er-knight/contests-web" style="text-decoration: underline; color: #F3EFE0;"> GitHub </a> </p>
+                <p style="color: #F3EFE0;"> &#x2022; </p>
+                <p class="ps-2"> <a href="https://github.com/er-knight/contests-cli" style="text-decoration: underline; color: #F3EFE0;"> Contests CLI </a> </p> 
+            </div>
+
             <div class="d-flex flex-wrap m-2">
                 <div class="d-flex flex-nowrap ps-2 pe-2">
                     <input class="align-self-center" type="checkbox" id="all-platforms" checked>
@@ -670,6 +679,10 @@ def main():
 
     webpage_content_after_contest_table = """
         
+            <footer>
+                <div class="text-center"> Generated using <a href="https://github.com/er-knight/contests-web/blob/main/update-webpage.py" style="text-decoration: underline; color: #F3EFE0"> Python </a> </div>
+            </footer>
+
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"> </script>
             
             <script>
