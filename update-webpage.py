@@ -552,57 +552,63 @@ def main():
             <title> Contests </title>
 
             <style>
-                /* hide scrollbar for Chrome, Safari and Opera */
                 body::-webkit-scrollbar {
-                    display: none;
+                    display: none; /* hide scrollbar for Chrome, Safari and Opera */
                 }
-                /* hide scrollbar for IE, Edge and Firefox */
                 body {
-                    -ms-overflow-style: none;  /* IE and Edge */
-                    scrollbar-width: none;  /* Firefox */
+                    -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
+                    scrollbar-width: none;  /* hide scrollbar for Firefox */
+
+                    background-color: #434242;
+
+                    font-family: 'Source Code Pro';
+                    font-weight: bold;
                 }
             </style>
 
         </head>
 
-        <body style="font-family: 'Source Code Pro'; font-weight: bold;">
-
-            <div class="d-flex justify-content-around m-2">
-                <div class="">
-                    <input type="checkbox" id="atcoder" checked>
-                    <label for="atcoder"> AtCoder </label>
+        <body style="color: #F3EFE0;">
+            <div class="d-flex flex-wrap m-2">
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="all-platforms" checked>
+                    <label class="align-self-center ps-2" for="all-platforms"> All Platforms </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="codechef" checked>
-                    <label for="codechef"> CodeChef </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="atcoder" checked>
+                    <label class="align-self-center ps-2" for="atcoder"> AtCoder </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="codeforces" checked>
-                    <label for="codeforces"> Codeforces </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="codechef" checked>
+                    <label class="align-self-center ps-2" for="codechef"> CodeChef </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="code-jam" checked>
-                    <label for="code-jam"> Code Jam </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="codeforces" checked>
+                    <label class="align-self-center ps-2" for="codeforces"> Codeforces </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="geeksforgeeks" checked>
-                    <label for="geeksforgeeks"> GeeksforGeeks </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="code-jam" checked>
+                    <label class="align-self-center ps-2" for="code-jam"> Code Jam </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="hackerearth" checked>
-                    <label for="hackerearth"> HackerEarth </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="geeksforgeeks" checked>
+                    <label class="align-self-center ps-2" for="geeksforgeeks"> GeeksforGeeks </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="hash-code" checked>
-                    <label for="hash-code"> Hash Code </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="hackerearth" checked>
+                    <label class="align-self-center ps-2" for="hackerearth"> HackerEarth </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="kick-start" checked>
-                    <label for="kick-start"> Kick Start </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="hash-code" checked>
+                    <label class="align-self-center ps-2" for="hash-code"> Hash Code </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="leetcode" checked>
-                    <label for="leetcode"> LeetCode </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="kick-start" checked>
+                    <label class="align-self-center ps-2" for="kick-start"> Kick Start </label>
+                </div>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="leetcode" checked>
+                    <label class="align-self-center ps-2" for="leetcode"> LeetCode </label>
                 </div>
             </div>
 
@@ -611,7 +617,7 @@ def main():
     webpage_content_contest_table       = [
         """
             <div class="m-2">
-                <table class="table table-bordered ">
+                <table style="color: #F3EFE0;" class="table table-bordered">
                     <tr>
                         <th>Platform</th>
                         <th>Title</th>
@@ -647,10 +653,10 @@ def main():
         webpage_content_contest_table.append(
         f"""
                     <tr class="{platform_class}">
-                        <td style="color: {'green' if contest in ongoing_contests else 'orange'};"> {contest.platform} </td>
-                        <td> <a href="{contest.url}" target="_blank" style="text-decoration: none; color: {'green' if contest in ongoing_contests else 'orange'};"> {contest.title} </a> </td>
-                        <td style="color: {'green' if contest in ongoing_contests else 'orange'};"> {contest.start_time} </td>
-                        <td style="color: {'green' if contest in ongoing_contests else 'orange'};"> {contest.duration} </td>
+                        <td style="color: #F3EFE0;"> {contest.platform} </td>
+                        <td> <a href="{contest.url}" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> {contest.title} </a> </td>
+                        <td style="color: #F3EFE0;"> {contest.start_time} </td>
+                        <td style="color: #F3EFE0;"> {contest.duration} </td>
                     </tr>
         """
         )
@@ -667,22 +673,29 @@ def main():
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"> </script>
             
             <script>
+
                 const platformIds = ["atcoder", "codechef", "codeforces", "code-jam", "geeksforgeeks", "hackerearth", "hash-code", "kick-start", "leetcode"]
+                
+                document.getElementById("all-platforms").addEventListener("change", function() {
+                    for (let platformId of platformIds) {
+                        let checkbox = document.getElementById(platformId);
+                        checkbox.checked = this.checked;
+                        let contestRows = document.getElementsByClassName(platformId)
+                        for (let i = 0; i < contestRows.length; ++i) {
+                            contestRows[i].style.display = this.checked ? "table-row" : "none";
+                        }
+                    }
+                });
+
                 for (let platformId of platformIds) {
                     document.getElementById(platformId).addEventListener("change", function() {
-                        if (this.checked) {
-                            let contestRows = document.getElementsByClassName(platformId)
-                            for (let i = 0; i < contestRows.length; ++i) {
-                                contestRows[i].style.display = "table-row";
-                            }
-                        } else {
-                            let contestRows = document.getElementsByClassName(platformId)
-                            for (let i = 0; i < contestRows.length; ++i) {
-                                contestRows[i].style.display = "none";
-                            }
+                        let contestRows = document.getElementsByClassName(platformId)
+                        for (let i = 0; i < contestRows.length; ++i) {
+                            contestRows[i].style.display = this.checked ? "table-row" : "none";
                         }
                     });
                 }
+
             </script>
 
         </body>
