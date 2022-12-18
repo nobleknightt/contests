@@ -16,64 +16,70 @@
             <title> Contests </title>
 
             <style>
-                /* hide scrollbar for Chrome, Safari and Opera */
                 body::-webkit-scrollbar {
-                    display: none;
+                    display: none; /* hide scrollbar for Chrome, Safari and Opera */
                 }
-                /* hide scrollbar for IE, Edge and Firefox */
                 body {
-                    -ms-overflow-style: none;  /* IE and Edge */
-                    scrollbar-width: none;  /* Firefox */
+                    -ms-overflow-style: none;  /* hide scrollbar for IE and Edge */
+                    scrollbar-width: none;  /* hide scrollbar for Firefox */
+
+                    background-color: #434242;
+
+                    font-family: 'Source Code Pro';
+                    font-weight: bold;
                 }
             </style>
 
         </head>
 
-        <body style="font-family: 'Source Code Pro'; font-weight: bold;">
-
-            <div class="d-flex justify-content-around m-2">
-                <div class="">
-                    <input type="checkbox" id="atcoder" checked>
-                    <label for="atcoder"> AtCoder </label>
+        <body style="color: #F3EFE0;">
+            <div class="d-flex flex-wrap m-2">
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="all-platforms" checked>
+                    <label class="align-self-center ps-2" for="all-platforms"> All Platforms </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="codechef" checked>
-                    <label for="codechef"> CodeChef </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="atcoder" checked>
+                    <label class="align-self-center ps-2" for="atcoder"> AtCoder </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="codeforces" checked>
-                    <label for="codeforces"> Codeforces </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="codechef" checked>
+                    <label class="align-self-center ps-2" for="codechef"> CodeChef </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="code-jam" checked>
-                    <label for="code-jam"> Code Jam </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="codeforces" checked>
+                    <label class="align-self-center ps-2" for="codeforces"> Codeforces </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="geeksforgeeks" checked>
-                    <label for="geeksforgeeks"> GeeksforGeeks </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="code-jam" checked>
+                    <label class="align-self-center ps-2" for="code-jam"> Code Jam </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="hackerearth" checked>
-                    <label for="hackerearth"> HackerEarth </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="geeksforgeeks" checked>
+                    <label class="align-self-center ps-2" for="geeksforgeeks"> GeeksforGeeks </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="hash-code" checked>
-                    <label for="hash-code"> Hash Code </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="hackerearth" checked>
+                    <label class="align-self-center ps-2" for="hackerearth"> HackerEarth </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="kick-start" checked>
-                    <label for="kick-start"> Kick Start </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="hash-code" checked>
+                    <label class="align-self-center ps-2" for="hash-code"> Hash Code </label>
                 </div>
-                <div class="">
-                    <input type="checkbox" id="leetcode" checked>
-                    <label for="leetcode"> LeetCode </label>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="kick-start" checked>
+                    <label class="align-self-center ps-2" for="kick-start"> Kick Start </label>
+                </div>
+                <div class="d-flex flex-nowrap ps-2 pe-2">
+                    <input class="align-self-center" type="checkbox" id="leetcode" checked>
+                    <label class="align-self-center ps-2" for="leetcode"> LeetCode </label>
                 </div>
             </div>
 
     
 
             <div class="m-2">
-                <table class="table table-bordered ">
+                <table style="color: #F3EFE0;" class="table table-bordered">
                     <tr>
                         <th>Platform</th>
                         <th>Title</th>
@@ -82,353 +88,367 @@
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://www.hackerearth.com/challenges/hackathon/ibm-z-student-contest-2022/" target="_blank" style="text-decoration: none; color: orange;"> IBM zStudent Contest </a> </td>
-                        <td style="color: orange;"> Wed, 14 Sep 2022, 9:30 AM </td>
-                        <td style="color: orange;"> 109 days, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hackathon/ibm-z-student-contest-2022/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> IBM zStudent Contest </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 14 Sep 2022, 9:30 AM </td>
+                        <td style="color: #F3EFE0;"> 109 days, 59 minutes </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://brother.hackerearth.com/" target="_blank" style="text-decoration: none; color: orange;"> Learn Coding for Brother Printers </a> </td>
-                        <td style="color: orange;"> Fri, 16 Sep 2022, 9:30 AM </td>
-                        <td style="color: orange;"> 107 days, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://buidl-the-future.hackerearth.com/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Buidl the Future: A Global Hack for Web3 </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 17 Oct 2022, 12:00 AM </td>
+                        <td style="color: #F3EFE0;"> 75 days, 23 hours, 59 minutes </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://www.hackerearth.com/challenges/hackathon/cloudera-applied-machine-learning-prototype-hackathon/" target="_blank" style="text-decoration: none; color: orange;"> Cloudera Applied Machine Learning  Prototype Hackathon </a> </td>
-                        <td style="color: orange;"> Sun, 2 Oct 2022, 7:30 PM </td>
-                        <td style="color: orange;"> 76 days, 14 hours, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/competitive/SORDI-ai-hackathon-2022/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> BMW SORDI.ai Hackathon 2022 </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 14 Nov 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 35 days, 55 minutes </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://buidl-the-future.hackerearth.com/" target="_blank" style="text-decoration: none; color: orange;"> Buidl the Future: A Global Hack for Web3 </a> </td>
-                        <td style="color: orange;"> Mon, 17 Oct 2022, 12:00 AM </td>
-                        <td style="color: orange;"> 75 days, 23 hours, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hackathon/intel-oneapi-hackathon-for-open-innovation/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Intel® oneAPI Hackathon for Open Innovation </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 16 Nov 2022, 5:00 PM </td>
+                        <td style="color: #F3EFE0;"> 60 days, 6 hours, 59 minutes </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://allscinofi.hackerearth.com/" target="_blank" style="text-decoration: none; color: orange;"> Hacking Health Tech – All Sci, No Fi </a> </td>
-                        <td style="color: orange;"> Wed, 9 Nov 2022, 10:31 AM </td>
-                        <td style="color: orange;"> 67 days, 23 hours, 54 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://hope.hackerearth.com/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Hackathon of Hope with Celo </a> </td>
+                        <td style="color: #F3EFE0;"> Tue, 22 Nov 2022, 6:58 AM </td>
+                        <td style="color: #F3EFE0;"> 71 days, 6 hours, 31 minutes </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://www.hackerearth.com/challenges/competitive/SORDI-ai-hackathon-2022/" target="_blank" style="text-decoration: none; color: orange;"> BMW SORDI.ai Hackathon 2022 </a> </td>
-                        <td style="color: orange;"> Mon, 14 Nov 2022, 6:00 PM </td>
-                        <td style="color: orange;"> 35 days, 55 minutes </td>
-                    </tr>
-        
-                    <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://hope.hackerearth.com/" target="_blank" style="text-decoration: none; color: orange;"> Hackathon of Hope with Celo </a> </td>
-                        <td style="color: orange;"> Tue, 22 Nov 2022, 6:58 AM </td>
-                        <td style="color: orange;"> 71 days, 6 hours, 31 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hiring/truecaller-developer-hiring-challenge/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Truecaller Backend Engineer Hiring Challenge </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 2 Dec 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 16 days, 5 hours, 55 minutes </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1769" target="_blank" style="text-decoration: none; color: orange;"> VK Cup 2022 - Квалификация (Engine) </a> </td>
-                        <td style="color: orange;"> Sat, 3 Dec 2022, 2:30 PM </td>
-                        <td style="color: orange;"> 15 days, 12 hours </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1769" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> VK Cup 2022 - Квалификация (Engine) </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 3 Dec 2022, 2:30 PM </td>
+                        <td style="color: #F3EFE0;"> 15 days, 12 hours </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://www.hackerearth.com/challenges/hiring/engineer-dot-net-hiring-challenge/" target="_blank" style="text-decoration: none; color: orange;"> Engineer/Sr. Engineer .Net Hiring Challenge </a> </td>
-                        <td style="color: orange;"> Mon, 12 Dec 2022, 6:00 PM </td>
-                        <td style="color: orange;"> 13 days, 5 hours, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hiring/p2epro-hiring-challenge/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Web3.0 Hiring Challenge </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 9 Dec 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 9 days, 12 hours </td>
                     </tr>
         
                     <tr class="hackerearth">
-                        <td style="color: orange;"> HackerEarth </td>
-                        <td> <a href="https://www.hackerearth.com/challenges/competitive/december-circuits-22/" target="_blank" style="text-decoration: none; color: orange;"> December Circuits '22 </a> </td>
-                        <td style="color: orange;"> Fri, 16 Dec 2022, 9:30 PM </td>
-                        <td style="color: orange;"> 7 days </td>
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hiring/backend-developer-hiring-challenge/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Backend Developer Hiring Challenge </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 9 Dec 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 9 days, 13 hours </td>
                     </tr>
         
-                    <tr class="leetcode">
-                        <td style="color: orange;"> LeetCode </td>
-                        <td> <a href="https://leetcode.com/contest/weekly-contest-324" target="_blank" style="text-decoration: none; color: orange;"> Weekly Contest 324 </a> </td>
-                        <td style="color: orange;"> Sun, 18 Dec 2022, 8:00 AM </td>
-                        <td style="color: orange;"> 1 hour, 30 minutes </td>
+                    <tr class="hackerearth">
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hiring/engineer-dot-net-hiring-challenge/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Engineer/Sr. Engineer .Net Hiring Challenge </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 12 Dec 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 13 days, 5 hours, 59 minutes </td>
                     </tr>
         
-                    <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1772" target="_blank" style="text-decoration: none; color: orange;"> Codeforces Round #839 (Div. 3) </a> </td>
-                        <td style="color: orange;"> Sun, 18 Dec 2022, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours, 15 minutes </td>
+                    <tr class="hackerearth">
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/competitive/december-circuits-22/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> December Circuits '22 </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 16 Dec 2022, 9:30 PM </td>
+                        <td style="color: #F3EFE0;"> 7 days </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/weekly-interview-series-81" target="_blank" style="text-decoration: none; color: orange;"> GFG Weekly Coding Contest - 81 </a> </td>
-                        <td style="color: orange;"> Mon, 19 Dec 2022, 12:30 AM </td>
-                        <td style="color: orange;"> 1 hour, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/weekly-interview-series-81" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> GFG Weekly Coding Contest - 81 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 18 Dec 2022, 7:00 PM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 30 minutes </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1763" target="_blank" style="text-decoration: none; color: orange;"> Codeforces Round #840 (Div. 2) and Enigma 2022 - Cybros LNMIIT </a> </td>
-                        <td style="color: orange;"> Mon, 19 Dec 2022, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1772" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Codeforces Round #839 (Div. 3) </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 18 Dec 2022, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 15 minutes </td>
+                    </tr>
+        
+                    <tr class="codeforces">
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1763" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Codeforces Round #840 (Div. 2) and Enigma 2022 - Cybros LNMIIT </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 19 Dec 2022, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours </td>
                     </tr>
         
                     <tr class="codechef">
-                        <td style="color: orange;"> CodeChef </td>
-                        <td> <a href="https://www.codechef.com/START70" target="_blank" style="text-decoration: none; color: orange;"> Starters 70 </a> </td>
-                        <td style="color: orange;"> Wed, 21 Dec 2022, 8:00 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> CodeChef </td>
+                        <td> <a href="https://www.codechef.com/START70" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Starters 70 </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 21 Dec 2022, 8:00 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="atcoder">
-                        <td style="color: orange;"> AtCoder </td>
-                        <td> <a href="https://atcoder.jp/contests/hokudai-hitachi2022" target="_blank" style="text-decoration: none; color: orange;"> Hitachi Hokudai Lab. & Hokkaido University Contest 2022 </a> </td>
-                        <td style="color: orange;"> Thu, 22 Dec 2022, 8:30 PM </td>
-                        <td style="color: orange;"> 30 days, 23 hours, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> AtCoder </td>
+                        <td> <a href="https://atcoder.jp/contests/hokudai-hitachi2022" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Hitachi Hokudai Lab. & Hokkaido University Contest 2022 </a> </td>
+                        <td style="color: #F3EFE0;"> Thu, 22 Dec 2022, 8:30 PM </td>
+                        <td style="color: #F3EFE0;"> 30 days, 23 hours, 59 minutes </td>
                     </tr>
         
                     <tr class="atcoder">
-                        <td style="color: orange;"> AtCoder </td>
-                        <td> <a href="https://atcoder.jp/contests/abc283" target="_blank" style="text-decoration: none; color: orange;"> UNIQUE VISION Programming Contest 2022 Winter(AtCoder Beginner Contest 283) </a> </td>
-                        <td style="color: orange;"> Sat, 24 Dec 2022, 5:30 PM </td>
-                        <td style="color: orange;"> 1 hour, 40 minutes </td>
+                        <td style="color: #F3EFE0;"> AtCoder </td>
+                        <td> <a href="https://atcoder.jp/contests/abc283" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> UNIQUE VISION Programming Contest 2022 Winter(AtCoder Beginner Contest 283) </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 24 Dec 2022, 5:30 PM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 40 minutes </td>
                     </tr>
         
                     <tr class="leetcode">
-                        <td style="color: orange;"> LeetCode </td>
-                        <td> <a href="https://leetcode.com/contest/biweekly-contest-94" target="_blank" style="text-decoration: none; color: orange;"> Biweekly Contest 94 </a> </td>
-                        <td style="color: orange;"> Sat, 24 Dec 2022, 8:00 PM </td>
-                        <td style="color: orange;"> 1 hour, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> LeetCode </td>
+                        <td> <a href="https://leetcode.com/contest/biweekly-contest-94" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Biweekly Contest 94 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 24 Dec 2022, 8:00 PM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 30 minutes </td>
+                    </tr>
+        
+                    <tr class="leetcode">
+                        <td style="color: #F3EFE0;"> LeetCode </td>
+                        <td> <a href="https://leetcode.com/contest/weekly-contest-325" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Weekly Contest 325 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 25 Dec 2022, 8:00 AM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 30 minutes </td>
                     </tr>
         
                     <tr class="atcoder">
-                        <td style="color: orange;"> AtCoder </td>
-                        <td> <a href="https://atcoder.jp/contests/agc060" target="_blank" style="text-decoration: none; color: orange;"> AtCoder Grand Contest 060 </a> </td>
-                        <td style="color: orange;"> Sun, 25 Dec 2022, 5:30 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> AtCoder </td>
+                        <td> <a href="https://atcoder.jp/contests/agc060" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> AtCoder Grand Contest 060 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 25 Dec 2022, 5:30 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/weekly-interview-series-82" target="_blank" style="text-decoration: none; color: orange;"> GFG Weekly Coding Contest - 82 </a> </td>
-                        <td style="color: orange;"> Mon, 26 Dec 2022, 12:30 AM </td>
-                        <td style="color: orange;"> 1 hour, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/weekly-interview-series-82" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> GFG Weekly Coding Contest - 82 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 25 Dec 2022, 7:00 PM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 30 minutes </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/bi-wizard-school-coding-tournament-100" target="_blank" style="text-decoration: none; color: orange;"> Bi-Wizard School Coding Tournament 10.0 </a> </td>
-                        <td style="color: orange;"> Mon, 26 Dec 2022, 11:30 PM </td>
-                        <td style="color: orange;"> 1 hour, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/bi-wizard-school-coding-tournament-100" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Bi-Wizard School Coding Tournament 10.0 </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 26 Dec 2022, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 1 hour, 30 minutes </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1731" target="_blank" style="text-decoration: none; color: orange;"> Codeforces Round (Div. 2) </a> </td>
-                        <td style="color: orange;"> Tue, 27 Dec 2022, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1731" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Codeforces Round (Div. 2) </a> </td>
+                        <td style="color: #F3EFE0;"> Tue, 27 Dec 2022, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours </td>
                     </tr>
         
                     <tr class="codechef">
-                        <td style="color: orange;"> CodeChef </td>
-                        <td> <a href="https://www.codechef.com/START71" target="_blank" style="text-decoration: none; color: orange;"> Starters 71 </a> </td>
-                        <td style="color: orange;"> Wed, 28 Dec 2022, 8:00 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> CodeChef </td>
+                        <td> <a href="https://www.codechef.com/START71" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Starters 71 </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 28 Dec 2022, 8:00 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1770" target="_blank" style="text-decoration: none; color: orange;"> Good Bye 2022: 2023 is NEAR </a> </td>
-                        <td style="color: orange;"> Fri, 30 Dec 2022, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1770" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Good Bye 2022: 2023 is NEAR </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 30 Dec 2022, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/mega-job-a-thon-hiring-challenge-for-freshers" target="_blank" style="text-decoration: none; color: orange;"> Mega Job-A-Thon - Hiring Challenge for Freshers </a> </td>
-                        <td style="color: orange;"> Thu, 5 Jan 2023, 1:30 AM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
-                    </tr>
-        
-                    <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1768" target="_blank" style="text-decoration: none; color: orange;"> Codeforces Round (Div. 2) </a> </td>
-                        <td style="color: orange;"> Thu, 5 Jan 2023, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/mega-job-a-thon-hiring-challenge-for-freshers" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Mega Job-A-Thon - Hiring Challenge for Freshers </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 4 Jan 2023, 8:00 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/mega-job-a-thon-hiring-challenge-for-experienced-candidates" target="_blank" style="text-decoration: none; color: orange;"> Mega Job-A-Thon - Hiring Challenge for Experienced Candidates </a> </td>
-                        <td style="color: orange;"> Fri, 6 Jan 2023, 1:30 AM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/mega-job-a-thon-hiring-challenge-for-experienced-candidates" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Mega Job-A-Thon - Hiring Challenge for Experienced Candidates </a> </td>
+                        <td style="color: #F3EFE0;"> Thu, 5 Jan 2023, 8:00 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
+                    </tr>
+        
+                    <tr class="codeforces">
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1768" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Codeforces Round (Div. 2) </a> </td>
+                        <td style="color: #F3EFE0;"> Thu, 5 Jan 2023, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours </td>
+                    </tr>
+        
+                    <tr class="hackerearth">
+                        <td style="color: #F3EFE0;"> HackerEarth </td>
+                        <td> <a href="https://www.hackerearth.com/challenges/hiring/juspay-developer-hiring-challenge-bangalore-jan-2023/" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Juspay Developer Hiring Challenge (Bangalore) - January 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 6 Jan 2023, 6:00 PM </td>
+                        <td style="color: #F3EFE0;"> 2 days, 5 hours, 59 minutes </td>
                     </tr>
         
                     <tr class="geeksforgeeks">
-                        <td style="color: orange;"> GeeksforGeeks </td>
-                        <td> <a href="https://practice.geeksforgeeks.org/contest/gate-cs-all-india-mock-42023" target="_blank" style="text-decoration: none; color: orange;"> GATE CS All India Mock 4(2023) </a> </td>
-                        <td style="color: orange;"> Sat, 7 Jan 2023, 5:30 AM </td>
-                        <td style="color: orange;"> 1 day, 23 hours, 59 minutes </td>
+                        <td style="color: #F3EFE0;"> GeeksforGeeks </td>
+                        <td> <a href="https://practice.geeksforgeeks.org/contest/gate-cs-all-india-mock-42023" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> GATE CS All India Mock 4(2023) </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 7 Jan 2023, 12:00 AM </td>
+                        <td style="color: #F3EFE0;"> 1 day, 23 hours, 59 minutes </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1778" target="_blank" style="text-decoration: none; color: orange;"> Codeforces Round (Div. 2) </a> </td>
-                        <td style="color: orange;"> Wed, 1 Feb 2023, 8:05 PM </td>
-                        <td style="color: orange;"> 2 hours </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1778" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Codeforces Round (Div. 2) </a> </td>
+                        <td style="color: #F3EFE0;"> Wed, 1 Feb 2023, 8:05 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours </td>
                     </tr>
         
                     <tr class="codeforces">
-                        <td style="color: orange;"> Codeforces </td>
-                        <td> <a href="https://codeforces.com/contests/1776" target="_blank" style="text-decoration: none; color: orange;"> SWERC 2022-2023 - Online Mirror (Unrated, ICPC Rules, Teams Preferred) </a> </td>
-                        <td style="color: orange;"> Sun, 19 Feb 2023, 4:35 PM </td>
-                        <td style="color: orange;"> 5 hours </td>
+                        <td style="color: #F3EFE0;"> Codeforces </td>
+                        <td> <a href="https://codeforces.com/contests/1776" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> SWERC 2022-2023 - Online Mirror (Unrated, ICPC Rules, Teams Preferred) </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 19 Feb 2023, 4:35 PM </td>
+                        <td style="color: #F3EFE0;"> 5 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Coding Practice with Kick Start Session #1 </a> </td>
-                        <td style="color: orange;"> Fri, 24 Feb 2023, 9:30 PM </td>
-                        <td style="color: orange;"> 4 days </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Coding Practice with Kick Start Session #1 </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 24 Feb 2023, 9:30 PM </td>
+                        <td style="color: #F3EFE0;"> 4 days </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Qualification Round 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 11 Mar 2023, 4:30 AM </td>
-                        <td style="color: orange;"> 1 day, 3 hours </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Qualification Round 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 11 Mar 2023, 4:30 AM </td>
+                        <td style="color: #F3EFE0;"> 1 day, 3 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round A 2023 </a> </td>
-                        <td style="color: orange;"> Sun, 19 Mar 2023, 9:30 AM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round A 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 19 Mar 2023, 9:30 AM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round 1A 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 25 Mar 2023, 6:30 AM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round 1A 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 25 Mar 2023, 6:30 AM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round 1B 2023 </a> </td>
-                        <td style="color: orange;"> Sun, 2 Apr 2023, 9:30 PM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round 1B 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 2 Apr 2023, 9:30 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="hash-code">
-                        <td style="color: orange;"> Hash Code </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/hashcode/schedule" target="_blank" style="text-decoration: none; color: orange;"> Qualification Round </a> </td>
-                        <td style="color: orange;"> Thu, 13 Apr 2023, 11:15 PM </td>
-                        <td style="color: orange;"> 3 hours, 45 minutes </td>
+                        <td style="color: #F3EFE0;"> Hash Code </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/hashcode/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Qualification Round </a> </td>
+                        <td style="color: #F3EFE0;"> Thu, 13 Apr 2023, 11:15 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours, 45 minutes </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round B 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 15 Apr 2023, 10:30 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round B 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 15 Apr 2023, 10:30 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round 1C 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 22 Apr 2023, 2:30 PM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round 1C 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 22 Apr 2023, 2:30 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Coding Practice with Kick Start Session #2 </a> </td>
-                        <td style="color: orange;"> Fri, 5 May 2023, 8:30 AM </td>
-                        <td style="color: orange;"> 4 days </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Coding Practice with Kick Start Session #2 </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 5 May 2023, 8:30 AM </td>
+                        <td style="color: #F3EFE0;"> 4 days </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round 2 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 13 May 2023, 7:30 PM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round 2 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 13 May 2023, 7:30 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round C 2023 </a> </td>
-                        <td style="color: orange;"> Sun, 21 May 2023, 7:30 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round C 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 21 May 2023, 7:30 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round 3 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 3 Jun 2023, 7:30 PM </td>
-                        <td style="color: orange;"> 2 hours, 30 minutes </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round 3 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 3 Jun 2023, 7:30 PM </td>
+                        <td style="color: #F3EFE0;"> 2 hours, 30 minutes </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round D 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 8 Jul 2023, 10:30 AM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round D 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 8 Jul 2023, 10:30 AM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="code-jam">
-                        <td style="color: orange;"> Code Jam </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: none; color: orange;"> World Finals 2023 </a> </td>
-                        <td style="color: orange;"> Fri, 28 Jul 2023, 7:30 PM </td>
-                        <td style="color: orange;"> 4 hours </td>
+                        <td style="color: #F3EFE0;"> Code Jam </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/codejam/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> World Finals 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Fri, 28 Jul 2023, 7:30 PM </td>
+                        <td style="color: #F3EFE0;"> 4 hours </td>
                     </tr>
         
                     <tr class="hash-code">
-                        <td style="color: orange;"> Hash Code </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/hashcode/schedule" target="_blank" style="text-decoration: none; color: orange;"> World Finals </a> </td>
-                        <td style="color: orange;"> Sat, 29 Jul 2023, 10:00 PM </td>
-                        <td style="color: orange;"> 4 hours </td>
+                        <td style="color: #F3EFE0;"> Hash Code </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/hashcode/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> World Finals </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 29 Jul 2023, 10:00 PM </td>
+                        <td style="color: #F3EFE0;"> 4 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round E 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 19 Aug 2023, 3:30 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round E 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 19 Aug 2023, 3:30 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Coding Practice with Kick Start Session #3 </a> </td>
-                        <td style="color: orange;"> Sun, 27 Aug 2023, 3:30 PM </td>
-                        <td style="color: orange;"> 4 days </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Coding Practice with Kick Start Session #3 </a> </td>
+                        <td style="color: #F3EFE0;"> Sun, 27 Aug 2023, 3:30 PM </td>
+                        <td style="color: #F3EFE0;"> 4 days </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round F 2023 </a> </td>
-                        <td style="color: orange;"> Mon, 18 Sep 2023, 4:30 AM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round F 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Mon, 18 Sep 2023, 4:30 AM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round G 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 14 Oct 2023, 5:30 PM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round G 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 14 Oct 2023, 5:30 PM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                     <tr class="kick-start">
-                        <td style="color: orange;"> Kick Start </td>
-                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: none; color: orange;"> Round H 2023 </a> </td>
-                        <td style="color: orange;"> Sat, 4 Nov 2023, 8:30 AM </td>
-                        <td style="color: orange;"> 3 hours </td>
+                        <td style="color: #F3EFE0;"> Kick Start </td>
+                        <td> <a href="https://codingcompetitions.withgoogle.com/kickstart/schedule" target="_blank" style="text-decoration: underline; color: #F3EFE0;"> Round H 2023 </a> </td>
+                        <td style="color: #F3EFE0;"> Sat, 4 Nov 2023, 8:30 AM </td>
+                        <td style="color: #F3EFE0;"> 3 hours </td>
                     </tr>
         
                 </table> 
@@ -439,22 +459,29 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"> </script>
             
             <script>
+
                 const platformIds = ["atcoder", "codechef", "codeforces", "code-jam", "geeksforgeeks", "hackerearth", "hash-code", "kick-start", "leetcode"]
+                
+                document.getElementById("all-platforms").addEventListener("change", function() {
+                    for (let platformId of platformIds) {
+                        let checkbox = document.getElementById(platformId);
+                        checkbox.checked = this.checked;
+                        let contestRows = document.getElementsByClassName(platformId)
+                        for (let i = 0; i < contestRows.length; ++i) {
+                            contestRows[i].style.display = this.checked ? "table-row" : "none";
+                        }
+                    }
+                });
+
                 for (let platformId of platformIds) {
                     document.getElementById(platformId).addEventListener("change", function() {
-                        if (this.checked) {
-                            let contestRows = document.getElementsByClassName(platformId)
-                            for (let i = 0; i < contestRows.length; ++i) {
-                                contestRows[i].style.display = "table-row";
-                            }
-                        } else {
-                            let contestRows = document.getElementsByClassName(platformId)
-                            for (let i = 0; i < contestRows.length; ++i) {
-                                contestRows[i].style.display = "none";
-                            }
+                        let contestRows = document.getElementsByClassName(platformId)
+                        for (let i = 0; i < contestRows.length; ++i) {
+                            contestRows[i].style.display = this.checked ? "table-row" : "none";
                         }
                     });
                 }
+
             </script>
 
         </body>
