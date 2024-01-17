@@ -1,0 +1,90 @@
+[
+    {
+        "id": "eb5dc9cd46cf4da2a62cf548a3c98fe5",
+        "platform": "AtCoder",
+        "title": "Toyota Programming Contest 2024#1\uff08AtCoder Beginner Contest 337\uff09",
+        "url": "https://atcoder.jp/contests/abc337",
+        "start_time": "2024-01-20T17:30:00+05:30",
+        "duration": 6000
+    },
+    {
+        "id": "5072d72cfb3a4c9693c105fc041d8b78",
+        "platform": "AtCoder",
+        "title": "AtCoder Regular Contest 170",
+        "url": "https://atcoder.jp/contests/arc170",
+        "start_time": "2024-01-21T17:30:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "12d883e7e7f243619888567ea578b03d",
+        "platform": "AtCoder",
+        "title": "AtCoder Beginner Contest 338",
+        "url": "https://atcoder.jp/contests/abc338",
+        "start_time": "2024-01-27T17:30:00+05:30",
+        "duration": 6000
+    },
+    {
+        "id": "570deedcf22b40b491f7433997d9c839",
+        "platform": "AtCoder",
+        "title": "Japan Registry Services (JPRS) Programming Contest 2024 (AtCoder Beginner Contest 339)",
+        "url": "https://atcoder.jp/contests/abc339",
+        "start_time": "2024-02-03T17:30:00+05:30",
+        "duration": 6000
+    },
+    {
+        "id": "3f58bef72c914b8ba0a12d6aea6e24f6",
+        "platform": "AtCoder",
+        "title": "AtCoder Regular Contest 171",
+        "url": "https://atcoder.jp/contests/arc171",
+        "start_time": "2024-02-04T17:30:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "a5ac667ebe914e35ba6695688b2403d9",
+        "platform": "AtCoder",
+        "title": "THIRD PROGRAMMING CONTEST 2023\uff08AtCoder Heuristic Contest 030\uff09",
+        "url": "https://atcoder.jp/contests/ahc030",
+        "start_time": "2024-02-09T15:30:00+05:30",
+        "duration": 0
+    },
+    {
+        "id": "c30deddd01a54d05b3ec320785b4a9bd",
+        "platform": "AtCoder",
+        "title": "KAJIMA CORPORATION CONTEST 2024\uff08AtCoder Beginner Contest 340\uff09",
+        "url": "https://atcoder.jp/contests/abc340",
+        "start_time": "2024-02-10T17:30:00+05:30",
+        "duration": 6000
+    },
+    {
+        "id": "81fe26f9d1e04bb4b409dfce559b7822",
+        "platform": "AtCoder",
+        "title": "Toyota Programming Contest 2024#2\uff08AtCoder Beginner Contest 341\uff09",
+        "url": "https://atcoder.jp/contests/abc341",
+        "start_time": "2024-02-17T17:30:00+05:30",
+        "duration": 6000
+    },
+    {
+        "id": "7f28d6164fbb43fb8dc837c01637d176",
+        "platform": "AtCoder",
+        "title": "The 1st Masters Championship-qual-",
+        "url": "https://atcoder.jp/contests/masters-qual",
+        "start_time": "2024-03-03T09:30:00+05:30",
+        "duration": 21600
+    },
+    {
+        "id": "5c1310c0a3af45e8bdbdc1257624eccb",
+        "platform": "LeetCode",
+        "title": "Weekly Contest 381",
+        "url": "https://leetcode.com/contest/weekly-contest-381",
+        "start_time": "2024-01-21T08:00:00+05:30",
+        "duration": 5400
+    },
+    {
+        "id": "1d6f2cff27ca40bcb86a95072cec8bee",
+        "platform": "LeetCode",
+        "title": "Biweekly Contest 122",
+        "url": "https://leetcode.com/contest/biweekly-contest-122",
+        "start_time": "2024-01-20T20:00:00+05:30",
+        "duration": 5400
+    }
+]
