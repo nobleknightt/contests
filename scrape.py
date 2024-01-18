@@ -163,6 +163,68 @@ def fetch_codeforces_contests() -> list[dict]:
     return contests
 
 
+def fetch_geeksforgeeks_contests() -> list[dict]:
+
+    URL = "https://practiceapi.geeksforgeeks.org/api/vr/events/"
+
+    payload = {
+        "type": "contest",
+        "sub_type": "upcoming"
+    }
+
+    contests = []
+
+    response = requests.get(URL, params=payload)
+
+    if response.ok:
+
+        response = response.json()
+        contests_data = response["results"]["upcoming"]
+
+        for data in contests_data:
+            
+            """
+            >>> print(data)
+            {
+                'slug': 'interview-series-65', 
+                'start_time': '2022-08-28T19:00:00', 
+                'end_time': '2022-08-28T20:30:00', 
+                'banner': {
+                    'mobile_url': 'https://media.geeksforgeeks.org/img-practice/banner/interview-series-65-1661154000-mobile.png', 
+                    'desktop_url': 'https://media.geeksforgeeks.org/img-practice/banner/interview-series-65-1661154005-desktop.png'
+                }, 
+                'name': 'Interview Series - 65', 
+                'status': 'upcoming', 
+                'time_diff': {
+                    'days': 0, 
+                    'hours': 4, 
+                    'mins': 8, 
+                    'secs': 13
+                }, 
+                'type': 3, 
+                'date': 'August 28, 2022', 
+                'time': '07:00 PM'
+            }
+            """
+
+            title = data["name"]
+            url   = f"https://practice.geeksforgeeks.org/contest/{data['slug']}"
+            start_time = datetime.fromisoformat(data["start_time"]).astimezone(ZoneInfo("Asia/Kolkata"))
+            end_time   = datetime.fromisoformat(data["end_time"]).astimezone(ZoneInfo("Asia/Kolkata"))
+            duration   = end_time - start_time
+
+            contests.append({                
+                "id": uuid.uuid4().hex,
+                "platform": "GeeksforGeeks",
+                "title": title,
+                "url": url,
+                "start_time": start_time.isoformat(),
+                "duration": duration.seconds
+            })
+
+    return contests
+
+
 def fetch_leetcode_contests() -> list[dict]:
 
     URL  = "https://leetcode.com/graphql"
