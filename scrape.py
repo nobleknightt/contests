@@ -284,6 +284,7 @@ contests = (
     fetch_atcoder_contests() + 
     fetch_codechef_contests() +
     fetch_codeforces_contests() +
+    fetch_geeksforgeeks_contests() +
     fetch_leetcode_contests()
 )
 
