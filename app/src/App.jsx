@@ -14,9 +14,16 @@ function formatDuration(durationSeconds) {
   return `${(minutes / 60).toFixed()}:${(minutes % 60).toString().padStart(2, "0")}`
 }
 
+function compareDates(first, second) {
+  const firstDate = new Date(first)
+  const secondDate = new Date(second)
+  console.log(firstDate, secondDate, firstDate - secondDate)
+  return firstDate - secondDate
+}
+
 function Card({ platform, title, url, startTime, duration, isVisible }) {
   return (
-    <div className={`${isVisible ? 'flex' : 'hidden'} flex-col border px-2 py-1 w-full`}>
+    <div className={`${isVisible ? 'flex' : 'hidden'} flex-col border px-2 py-1 w-full hover:border-gray-950`}>
       <div>{platform}</div>
       <div className="text-xl text-wrap"><a href={url}>{title}</a></div>
       <div className="flex gap-2">
@@ -36,7 +43,8 @@ function App() {
   useEffect(() => {
     setSelectedPlatforms(
       platforms.reduce((_selectedPlatforms, platform) => {
-          return {..._selectedPlatforms, [platform]: true,
+        return {
+          ..._selectedPlatforms, [platform]: true,
         }
       }, {})
     )
@@ -48,15 +56,26 @@ function App() {
   }, [])
 
   return (
-    <div className="flex flex-col h-screen">
-      <div className="flex flex-wrap w-full items-center justify-center font-['Atkinson_Hyperlegible'] p-1 gap-1">
+    <div className="tracking-tight font-['Atkinson_Hyperlegible'] flex flex-col items-center h-screen">
+      <div className="flex p-2 items-end gap-4">
+        <div className="text-6xl tracking-tighter">Contests</div>
+        <div className="border p-2 mb-2 h-8 inline-flex items-center text-xl tracking-tighter decoration-1 decoration-gray-200 underline hover:decoration-gray-950 hover:border-gray-950">
+          <a href="https://github.com/er-knight/contests">GitHub</a>
+        </div>
+      </div>
+      <div className="p-2 pt-0 text-center">Built with 
+        <a href="https://github.com/er-knight/contests/tree/main/app/src/App.jsx" className="pl-1 decoration-1 decoration-gray-200 underline hover:decoration-gray-950">React</a> and 
+        <a href="https://github.com/er-knight/contests/tree/main/app/src/App.jsx" className="pl-1 decoration-1 decoration-gray-200 underline hover:decoration-gray-950">Tailwind CSS</a> with little help from 
+        <a href="https://github.com/er-knight/contests/blob/main/update-contests.py" className="pl-1 decoration-1 decoration-gray-200 underline hover:decoration-gray-950">Python</a>
+      </div>
+      <div className="flex flex-wrap w-full items-center justify-center p-1 gap-1">
         {
           platforms.map(platform => (
             <div
               key={platform.toLowerCase()}
-              className={`border px-2 py-1 hover:cursor-pointer ${selectedPlatforms[platform]
-                  ? 'bg-green-400'
-                  : 'bg-white'
+              className={`border px-2 py-1 hover:cursor-pointer hover:border-gray-950 ${selectedPlatforms[platform]
+                ? 'bg-green-400'
+                : 'bg-white'
                 }`}
               onClick={() => setSelectedPlatforms({
                 ...selectedPlatforms, [platform]: !selectedPlatforms[platform]
@@ -65,9 +84,11 @@ function App() {
           ))
         }
       </div>
-      <div className="grow overflow-auto flex flex-col w-fit mx-auto font-['Atkinson_Hyperlegible'] p-1 gap-1">
+      <div className="grow overflow-auto flex flex-col w-fit mx-auto p-1 gap-1 md:w-[768px]">
         {
-          contests.map(contest => (
+          [].concat(contests).sort(
+            (a, b) => compareDates(a.start_time, b.start_time)
+          ).map(contest => (
             <Card
               key={contest.id}
               platform={contest.platform}
