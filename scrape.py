@@ -114,6 +114,55 @@ def fetch_codechef_contests() -> list[dict]:
     return contests
 
 
+def fetch_codeforces_contests() -> list[dict]:
+
+    URL = "https://codeforces.com/api/contest.list"
+
+    contests = []
+
+    response = requests.get(URL)
+
+    if response.ok:
+
+        response = response.json()
+        contests_data = response["result"]
+
+        for data in contests_data:
+            
+            """
+            >>> print(data)
+            {
+                'id': 1723, 
+                'name': 'ICPC 2022 Online Challenge powered by HUAWEI - Problem 1', 
+                'type': 'IOI', 
+                'phase': 'BEFORE', 
+                'frozen': False, 
+                'durationSeconds': 1296000, 
+                'startTimeSeconds': 1663200000, 
+                'relativeTimeSeconds': -1747109
+            }
+            """
+
+            title = data["name"]
+            url   = f"https://codeforces.com/contests/{data['id']}"
+            start_time = datetime.fromtimestamp(float(data["startTimeSeconds"]), tz=ZoneInfo("Asia/Kolkata"))
+            end_time   = start_time + timedelta(seconds=float(data["durationSeconds"]))
+            if end_time <= datetime.now(tz=ZoneInfo("Asia/Kolkata")): 
+                continue # include ongoing and upcoming contests only                           
+            duration   = end_time - start_time
+
+            contests.append({                
+                "id": uuid.uuid4().hex,
+                "platform": "Codeforces",
+                "title": title,
+                "url": url,
+                "start_time": start_time.isoformat(),
+                "duration": duration.seconds
+            })
+
+    return contests
+
+
 def fetch_leetcode_contests() -> list[dict]:
 
     URL  = "https://leetcode.com/graphql"
@@ -171,8 +220,9 @@ def fetch_leetcode_contests() -> list[dict]:
 
 contests = (
     fetch_atcoder_contests() + 
-    fetch_leetcode_contests() +
-    fetch_codechef_contests()
+    fetch_codechef_contests() +
+    fetch_codeforces_contests() +
+    fetch_leetcode_contests()
 )
 
 with (Path(__file__).parent / "contests-schedule-minified.json").open("w") as f:
