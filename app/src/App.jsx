@@ -29,7 +29,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
 
 function App() {
   const [contests, setContests] = useState([])
-  const platforms = ["AtCoder", "CodeChef", "Codeforces", "GeeksforGeeks", "HackerEarth", "LeetCode"]
+  const platforms = ["AtCoder", "CodeChef", "Codeforces", "GeeksforGeeks", "LeetCode"]
   const [selectedPlatforms, setSelectedPlatforms] = useState({})
   const url = import.meta.env.VITE_API_URL
 

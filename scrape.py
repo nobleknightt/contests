@@ -288,8 +288,8 @@ contests = (
     fetch_leetcode_contests()
 )
 
-with (Path(__file__).parent / "contests-schedule-minified.json").open("w") as f:
+with (Path(__file__).parent / "contests").open("w") as f:
     json.dump(contests, f)
 
-with (Path(__file__).parent / "contests-schedule.json").open("w") as f:
+with (Path(__file__).parent / "contests.json").open("w") as f:
     json.dump(contests, f, indent=4)
