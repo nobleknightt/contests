@@ -1,6 +1,6 @@
 [
     {
-        "id": "eb5dc9cd46cf4da2a62cf548a3c98fe5",
+        "id": "b220c3b7ce8e4dcebb4f9a9392077633",
         "platform": "AtCoder",
         "title": "Toyota Programming Contest 2024#1\uff08AtCoder Beginner Contest 337\uff09",
         "url": "https://atcoder.jp/contests/abc337",
@@ -8,7 +8,7 @@
         "duration": 6000
     },
     {
-        "id": "5072d72cfb3a4c9693c105fc041d8b78",
+        "id": "243349dbe52547e7a67e91163033eb35",
         "platform": "AtCoder",
         "title": "AtCoder Regular Contest 170",
         "url": "https://atcoder.jp/contests/arc170",
@@ -16,7 +16,7 @@
         "duration": 7200
     },
     {
-        "id": "12d883e7e7f243619888567ea578b03d",
+        "id": "700bf63a85ab4b30beb3076168286add",
         "platform": "AtCoder",
         "title": "AtCoder Beginner Contest 338",
         "url": "https://atcoder.jp/contests/abc338",
@@ -24,7 +24,7 @@
         "duration": 6000
     },
     {
-        "id": "570deedcf22b40b491f7433997d9c839",
+        "id": "2e78909cffc644708574bd87de0be94f",
         "platform": "AtCoder",
         "title": "Japan Registry Services (JPRS) Programming Contest 2024 (AtCoder Beginner Contest 339)",
         "url": "https://atcoder.jp/contests/abc339",
@@ -32,7 +32,7 @@
         "duration": 6000
     },
     {
-        "id": "3f58bef72c914b8ba0a12d6aea6e24f6",
+        "id": "b5526fbd11b041d48aa6155f9ea01603",
         "platform": "AtCoder",
         "title": "AtCoder Regular Contest 171",
         "url": "https://atcoder.jp/contests/arc171",
@@ -40,7 +40,7 @@
         "duration": 7200
     },
     {
-        "id": "a5ac667ebe914e35ba6695688b2403d9",
+        "id": "66e8205adc5e480aba1820b9e3525ee7",
         "platform": "AtCoder",
         "title": "THIRD PROGRAMMING CONTEST 2023\uff08AtCoder Heuristic Contest 030\uff09",
         "url": "https://atcoder.jp/contests/ahc030",
@@ -48,7 +48,7 @@
         "duration": 0
     },
     {
-        "id": "c30deddd01a54d05b3ec320785b4a9bd",
+        "id": "d92f0079b3624ae082873a5b40fec186",
         "platform": "AtCoder",
         "title": "KAJIMA CORPORATION CONTEST 2024\uff08AtCoder Beginner Contest 340\uff09",
         "url": "https://atcoder.jp/contests/abc340",
@@ -56,7 +56,7 @@
         "duration": 6000
     },
     {
-        "id": "81fe26f9d1e04bb4b409dfce559b7822",
+        "id": "9ba1fbe875aa420a851402e221bf1b23",
         "platform": "AtCoder",
         "title": "Toyota Programming Contest 2024#2\uff08AtCoder Beginner Contest 341\uff09",
         "url": "https://atcoder.jp/contests/abc341",
@@ -64,7 +64,15 @@
         "duration": 6000
     },
     {
-        "id": "7f28d6164fbb43fb8dc837c01637d176",
+        "id": "e8d54307e6a841b7b1b4ef0e870df777",
+        "platform": "AtCoder",
+        "title": "AtCoder Regular Contest 172",
+        "url": "https://atcoder.jp/contests/arc172",
+        "start_time": "2024-02-18T17:30:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "50a5271fc34b43239c86ab4de4f009b2",
         "platform": "AtCoder",
         "title": "The 1st Masters Championship-qual-",
         "url": "https://atcoder.jp/contests/masters-qual",
@@ -72,7 +80,7 @@
         "duration": 21600
     },
     {
-        "id": "5c1310c0a3af45e8bdbdc1257624eccb",
+        "id": "9417d1438a0943799d7b09e4aa2ccd22",
         "platform": "LeetCode",
         "title": "Weekly Contest 381",
         "url": "https://leetcode.com/contest/weekly-contest-381",
@@ -80,11 +88,59 @@
         "duration": 5400
     },
     {
-        "id": "1d6f2cff27ca40bcb86a95072cec8bee",
+        "id": "05a89ef7e823481ab704bc7dadd1f7d8",
         "platform": "LeetCode",
         "title": "Biweekly Contest 122",
         "url": "https://leetcode.com/contest/biweekly-contest-122",
         "start_time": "2024-01-20T20:00:00+05:30",
         "duration": 5400
+    },
+    {
+        "id": "c4bed276a6074f7da69e96f9112dfc45",
+        "platform": "CodeChef",
+        "title": "Starters 118",
+        "url": "https://www.codechef.com/START118",
+        "start_time": "2024-01-24T20:00:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "ce6a9769d5714d04b834b0642f98c061",
+        "platform": "CodeChef",
+        "title": "Starters 119",
+        "url": "https://www.codechef.com/START119",
+        "start_time": "2024-01-31T20:00:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "246d86743d874d889c73d8d97d656100",
+        "platform": "CodeChef",
+        "title": "Starters 120",
+        "url": "https://www.codechef.com/START120",
+        "start_time": "2024-02-07T20:00:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "63db5912da974b40811cf09b41fdd6db",
+        "platform": "CodeChef",
+        "title": "Starters 121",
+        "url": "https://www.codechef.com/START121",
+        "start_time": "2024-02-14T20:00:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "b65f2b4adcd347068b6707de43300e7e",
+        "platform": "CodeChef",
+        "title": "Starters 122",
+        "url": "https://www.codechef.com/START122",
+        "start_time": "2024-02-21T20:00:00+05:30",
+        "duration": 7200
+    },
+    {
+        "id": "e49c4433544b45579edbfc869246e4b0",
+        "platform": "CodeChef",
+        "title": "Starters 123",
+        "url": "https://www.codechef.com/START123",
+        "start_time": "2024-02-28T20:00:00+05:30",
+        "duration": 7200
     }
 ]

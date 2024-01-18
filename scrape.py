@@ -59,6 +59,61 @@ def fetch_atcoder_contests() -> list[dict]:
     return contests
 
 
+def fetch_codechef_contests() -> list[dict]:
+
+    URL = "https://www.codechef.com/api/list/contests/all"
+
+    payload = {
+        "sort_by": "START",
+        "sorting_order": "asc",
+    }
+
+    contests = []
+
+    response = requests.get(URL, params=payload)
+
+    if response.ok:
+
+        response = response.json()
+        contests_data = response["present_contests"] + response["future_contests"]
+
+        for data in contests_data:
+            
+            """
+            >>> print(data)
+            {
+                'contest_code': 'START54', 
+                'contest_name': 'Starters 54 (Rated for Div 2, 3 & 4)', 
+                'contest_start_date': '31 Aug 2022  20:00:00', 
+                'contest_end_date': '31 Aug 2022  23:00:00', 
+                'contest_start_date_iso': '2022-08-31T20:00:00+05:30', 
+                'contest_end_date_iso': '2022-08-31T23:00:00+05:30', 
+                'contest_duration': '180', 
+                'distinct_users': 0
+            }
+            """
+
+            try:
+                title = data["contest_name"]
+                url   = f"https://www.codechef.com/{data['contest_code']}"
+                start_time = datetime.fromisoformat(data["contest_start_date_iso"])
+                end_time   = datetime.fromisoformat(data["contest_end_date_iso"])
+                duration   = end_time - start_time
+            except:
+                continue
+
+            contests.append({                
+                "id": uuid.uuid4().hex,
+                "platform": "CodeChef",
+                "title": title,
+                "url": url,
+                "start_time": start_time.isoformat(),
+                "duration": duration.seconds
+            })
+
+    return contests
+
+
 def fetch_leetcode_contests() -> list[dict]:
 
     URL  = "https://leetcode.com/graphql"
@@ -116,7 +171,8 @@ def fetch_leetcode_contests() -> list[dict]:
 
 contests = (
     fetch_atcoder_contests() + 
-    fetch_leetcode_contests()
+    fetch_leetcode_contests() +
+    fetch_codechef_contests()
 )
 
 with (Path(__file__).parent / "contests-schedule-minified.json").open("w") as f:
