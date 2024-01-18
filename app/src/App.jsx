@@ -1,14 +1,27 @@
 import { useEffect, useState } from 'react'
 
 
+function formatDate(isoFormatStr) {
+  const date = new Date(isoFormatStr)
+  const options = {
+    hour12: true, weekday: "short", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"
+  }
+  return date.toLocaleString(navigator.language, options).replace('am', 'AM').replace('pm', 'PM')
+}
+
+function formatDuration(durationSeconds) {
+  const minutes = durationSeconds / 60
+  return `${(minutes / 60).toFixed()}:${(minutes % 60).toString().padStart(2, "0")}`
+}
+
 function Card({ platform, title, url, startTime, duration, isVisible }) {
   return (
     <div className={`${isVisible ? 'flex' : 'hidden'} flex-col border px-2 py-1 w-full`}>
       <div>{platform}</div>
       <div className="text-xl text-wrap"><a href={url}>{title}</a></div>
       <div className="flex gap-2">
-        <div className="border p-1">{startTime}</div>
-        <div className="border p-1">{duration}</div>
+        <div className="border p-1">{formatDate(startTime)}</div>
+        <div className="border p-1">{formatDuration(duration)}</div>
       </div>
     </div>
   )
