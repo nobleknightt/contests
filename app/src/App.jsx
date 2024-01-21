@@ -10,6 +10,10 @@ function formatDate(isoFormatStr) {
   if (date.toDateString() === today.toDateString()) {
     return `Today, ${date.toLocaleTimeString(navigator.language, options).replace('am', 'AM').replace('pm', 'PM')}`
   }
+  const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1)
+  if (date.toDateString() === yesterday.toDateString()) {
+    return `Yesterday, ${date.toLocaleTimeString(navigator.language, options).replace('am', 'AM').replace('pm', 'PM')}`
+  }
   const tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1)
   if (date.toDateString() === tomorrow.toDateString()) {
     return `Tomorrow, ${date.toLocaleTimeString(navigator.language, options).replace('am', 'AM').replace('pm', 'PM')}`
@@ -43,25 +47,33 @@ function compareDates(first, second) {
 function Card({ platform, title, url, startTime, duration, isVisible }) {
 
   const [countdownSeconds, setCountdownSeconds] = useState(0)
-  const [status, setStatus] = useState("Upcoming")
+  const [status, setStatus] = useState("")
+
+  const contestStartTime = new Date(startTime)
+  const contestEndTime = new Date(startTime)
+  contestEndTime.setSeconds(contestStartTime.getSeconds() + duration)
 
   useEffect(() => {
-    const contestStartTime = new Date(startTime)
     const now = new Date()
-    if (contestStartTime <= now) {
+    if (contestStartTime > now) {
+      setStatus("Upcoming")
+      setCountdownSeconds(((contestStartTime - now) / 1000).toFixed())
+    } else if (contestStartTime <= now && now <= contestEndTime) {
       setStatus("Ongoing")
-      contestStartTime.setSeconds(contestStartTime.getSeconds() + duration)
-      setCountdownSeconds(((contestStartTime - now) / 1000).toFixed())
-    } else {
-      setCountdownSeconds(((contestStartTime - now) / 1000).toFixed())
+      setCountdownSeconds(((contestEndTime - now) / 1000).toFixed())
+    } else { // contestEndTime > now
+      setStatus("Completed")
+      setCountdownSeconds(0)
     }
     const countdownTimer = setInterval(() => {
-      const contestStartTime = new Date(startTime)
       const now = new Date()
-      if (contestStartTime <= now) {
-        setStatus("Ongoing")
-      } else {
+      if (contestStartTime > now) {
         setStatus("Upcoming")
+      } else if (contestStartTime <= now && now <= contestEndTime) {
+        setStatus("Ongoing")
+      } else { // contestEndTime > now
+        setStatus("Completed")
+        clearInterval(countdownTimer)
       }
       setCountdownSeconds(prevCountdownSeconds => prevCountdownSeconds - 1)
     }, 1000)
@@ -73,8 +85,14 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
       <div className="flex gap-1 flex-wrap">
         <div>{platform}</div>
         <div className="flex gap-2">
-          <div className={`inline-flex items-center text-sm border px-1 ${status == "Upcoming" ? "bg-green-200" : "bg-red-300"}`}>{status}</div>
-          <div className="inline-flex items-center text-sm border px-1">{formatCountdown(countdownSeconds)}</div>
+          <div className={`inline-flex items-center text-sm border px-1 ${
+            status == "Completed" ? "bg-red-300" : "bg-green-200"}`
+          }>{status}</div>
+          {
+            status !== "Completed" && <div className="inline-flex items-center text-sm border px-1">
+              {formatCountdown(countdownSeconds)}
+            </div>
+          }
         </div>
       </div>
       <div className="text-xl text-wrap underline decoration-1 decoration-gray-200 hover:decoration-gray-950"><a href={url}>{title}</a></div>
