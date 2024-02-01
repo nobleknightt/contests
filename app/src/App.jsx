@@ -28,14 +28,14 @@ function formatDuration(durationSeconds) {
 }
 
 function formatCountdown(countdownSeconds) {
-  const days = countdownSeconds / (3600 * 24) 
+  const days = Math.floor(countdownSeconds / (3600 * 24)) 
   countdownSeconds = countdownSeconds % (3600 * 24)
   const hours = countdownSeconds / 3600
   countdownSeconds = countdownSeconds % 3600
   const minutes = countdownSeconds / 60
   const seconds = countdownSeconds % 60
 
-  return `${days >= 1 ? Math.floor(days) : ''}${days >= 1 ? days.toFixed() == 1 ? ' day, ' : ' days, ': ''}${Math.floor(hours).toString().padStart(2, '0')} : ${Math.floor(minutes).toString().padStart(2, '0')} : ${Math.floor(seconds).toString().padStart(2, '0')}`
+  return `${days >= 1 ? days.toString() + (days > 1 ? ' days, ' : ' day, ') : ''}${Math.floor(hours).toString().padStart(2, '0')} : ${Math.floor(minutes).toString().padStart(2, '0')} : ${Math.floor(seconds).toString().padStart(2, '0')}`
 }
 
 function compareDates(first, second) {
