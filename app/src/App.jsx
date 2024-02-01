@@ -67,6 +67,9 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
     }
     const countdownTimer = setInterval(() => {
       const now = new Date()
+      if (((contestStartTime - now) / 1000).toFixed() == 5 * 60) {
+        new Notification(`${title} about to start in 5 minutes.`)
+      }  
       if (contestStartTime > now) {
         setStatus("Upcoming")
       } else if (contestStartTime <= now && now <= contestEndTime) {
