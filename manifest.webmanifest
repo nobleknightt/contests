@@ -1,7 +1,7 @@
 {
     "name": "Contests",
     "short_name": "Contests",
-    "start_url": "/",
+    "start_url": "https://er-knight.github.io/contests/",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "lang": "en",
