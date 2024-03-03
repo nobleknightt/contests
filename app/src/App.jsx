@@ -81,7 +81,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
       setCountdownSeconds(prevCountdownSeconds => prevCountdownSeconds - 1)
     }, 1000)
     return () => clearInterval(countdownTimer)
-  }, [])
+  }, [status])
   
   return (
     <div className={`${isVisible ? 'flex' : 'hidden'} flex-col border p-2 gap-1 w-full hover:border-gray-950`}>
