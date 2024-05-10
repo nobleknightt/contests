@@ -22,20 +22,15 @@ function formatDate(isoFormatStr) {
   return date.toLocaleString(navigator.language, options).replace('am', 'AM').replace('pm', 'PM')
 }
 
-function formatDuration(durationSeconds) {
-  const minutes = durationSeconds / 60
-  return `${(minutes / 60).toFixed()}:${(minutes % 60).toString().padStart(2, "0")}`
-}
+function formatSeconds(_seconds, includeSeconds=false) {
+  const days = Math.floor(_seconds / (3600 * 24))
+  _seconds = _seconds % (3600 * 24)
+  const hours = _seconds / 3600
+  _seconds = _seconds % 3600
+  const minutes = _seconds / 60
+  const seconds = _seconds % 60
 
-function formatCountdown(countdownSeconds) {
-  const days = Math.floor(countdownSeconds / (3600 * 24)) 
-  countdownSeconds = countdownSeconds % (3600 * 24)
-  const hours = countdownSeconds / 3600
-  countdownSeconds = countdownSeconds % 3600
-  const minutes = countdownSeconds / 60
-  const seconds = countdownSeconds % 60
-
-  return `${days >= 1 ? days.toString() + (days > 1 ? ' days, ' : ' day, ') : ''}${Math.floor(hours).toString().padStart(2, '0')} : ${Math.floor(minutes).toString().padStart(2, '0')} : ${Math.floor(seconds).toString().padStart(2, '0')}`
+  return `${days >= 1 ? days.toString() + (days > 1 ? ' days, ' : ' day, ') : ''}${Math.floor(hours).toString().padStart(2, '0')} : ${Math.floor(minutes).toString().padStart(2, '0')}${includeSeconds ? ' : ' + Math.floor(seconds).toString().padStart(2, '0') : ''}`
 }
 
 function compareDates(first, second) {
@@ -93,7 +88,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
           }>{status}</div>
           {
             status !== "Completed" && <div className="inline-flex items-center text-sm border px-1">
-              {formatCountdown(countdownSeconds)}
+              {formatSeconds(countdownSeconds, true)}
             </div>
           }
         </div>
@@ -101,7 +96,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
       <div className="text-xl text-wrap underline decoration-1 decoration-gray-200 hover:decoration-gray-950"><a href={url}>{title}</a></div>
       <div className="flex gap-2 flex-wrap">
         <div className="border px-1">{formatDate(startTime)}</div>
-        <div className="border px-1">{formatDuration(duration)}</div>
+        <div className="border px-1">{formatSeconds(duration)}</div>
       </div>
     </div>
   )
