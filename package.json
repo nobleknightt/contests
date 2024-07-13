@@ -1,11 +1,10 @@
 {
-  "name": "app",
+  "name": "contests",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "[ \"$(node --version | cut -c 2-3)\" = \"20\" ] && vite",
+    "build": "[ \"$(node --version | cut -c 2-3)\" = \"20\" ] && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
