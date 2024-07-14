@@ -1,3 +1,9 @@
+import AtCoder from "../assets/atcoder.png"
+import CodeChef from "../assets/codechef.png"
+import Codeforces from "../assets/codeforces.png"
+import GeeksforGeeks from "../assets/geeksforgeeks.png"
+import LeetCode from "../assets/leetcode.png"
+
 function formatDate(isoFormatStr) {
     const date = new Date(isoFormatStr)
     let options = {
@@ -37,4 +43,12 @@ function compareDates(first, second) {
     return firstDate - secondDate
 }
 
-export { formatDate, formatSeconds, compareDates }
+const platformIcons = {
+    "AtCoder": AtCoder,
+    "CodeChef": CodeChef,
+    "Codeforces": Codeforces,
+    "GeeksforGeeks": GeeksforGeeks,
+    "LeetCode": LeetCode
+}
+
+export { formatDate, formatSeconds, compareDates, platformIcons }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { formatDate, formatSeconds } from "../utils"
+import { formatDate, formatSeconds, platformIcons } from "../utils"
 
 function Card({ platform, title, url, startTime, duration, isVisible }) {
 
@@ -42,8 +42,11 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
 
     return (
         <div className={`${isVisible ? 'flex' : 'hidden'} flex-col border p-2 gap-1 w-full hover:border-gray-950`}>
-            <div className="flex gap-1 flex-wrap">
-                <div>{platform}</div>
+            <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2">
+                    <img src={platformIcons[platform]} width={24} height={24}></img>
+                    {platform}
+                </div>
                 <div className="flex gap-2">
                     <div className={`inline-flex items-center text-sm border px-1 ${status == "Completed" ? "bg-red-300" : "bg-green-200"}`
                     }>{status}</div>
@@ -54,7 +57,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
                     }
                 </div>
             </div>
-            <div className="text-xl text-wrap underline decoration-1 decoration-gray-200 hover:decoration-gray-950"><a href={url}>{title}</a></div>
+            <div className="text-xl text-wrap underline decoration-1 decoration-gray-200 hover:decoration-gray-950"><a href={url} target="_blank">{title}</a></div>
             <div className="flex gap-2 flex-wrap">
                 <div className="border px-1">{formatDate(startTime)}</div>
                 <div className="border px-1">{formatSeconds(duration)}</div>
