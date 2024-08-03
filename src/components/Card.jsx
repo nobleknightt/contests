@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react"
 import { formatDate, formatSeconds, platformIcons } from "../utils"
 
+const bgColor = {
+    upcoming: "bg-green-200",
+    ongoing: "bg-orange-200",
+    completed: "bg-red-300"
+}
+
 function Card({ platform, title, url, startTime, duration, isVisible }) {
 
     const [countdownSeconds, setCountdownSeconds] = useState(0)
@@ -48,8 +54,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
                     {platform}
                 </div>
                 <div className="flex gap-2">
-                    <div className={`inline-flex items-center text-sm border px-1 ${status == "Completed" ? "bg-red-300" : "bg-green-200"}`
-                    }>{status}</div>
+                    <div className={`inline-flex items-center text-sm border px-1 ${bgColor[status.toLowerCase()]}`}>{status}</div>
                     {
                         status !== "Completed" && <div className="inline-flex items-center text-sm border px-1">
                             {formatSeconds(countdownSeconds, true)}
