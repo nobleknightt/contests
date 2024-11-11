@@ -13,6 +13,29 @@ function App() {
 
   const url = import.meta.env.VITE_API_URL
 
+  const askForNotificationPermission = () => {
+    if ('Notification' in window) {
+      if (Notification.permission === 'default') {
+        // Request permission to show notifications
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            console.log('Notification permission granted');
+          } else {
+            console.log('Notification permission denied');
+          }
+        }).catch(err => {
+          console.error('Notification permission request failed', err);
+        });
+      } else if (Notification.permission === 'granted') {
+        console.log('Notification permission already granted');
+      } else {
+        console.log('Notification permission denied');
+      }
+    } else {
+      console.log('Browser does not support notifications');
+    }
+  };
+
   useEffect(() => {
     setSelectedPlatforms(
       platforms.reduce((_selectedPlatforms, platform) => {
@@ -27,6 +50,11 @@ function App() {
       response => setContests(response)
     )
   }, [])
+
+  // Ask for permission on component mount
+  useEffect(() => {
+    askForNotificationPermission();
+  }, []);
 
   return (
     <div className="tracking-tight font-['Atkinson_Hyperlegible'] flex flex-col items-center h-screen px-1 py-2">

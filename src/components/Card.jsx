@@ -11,7 +11,7 @@ function Card({ platform, title, url, startTime, duration, isVisible }) {
 
     const [countdownSeconds, setCountdownSeconds] = useState(0)
     const [status, setStatus] = useState("")
-
+    
     const contestStartTime = new Date(startTime)
     const contestEndTime = new Date(startTime)
     contestEndTime.setSeconds(contestStartTime.getSeconds() + duration)

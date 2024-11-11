@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "[ \"$(node --version | cut -c 2-3)\" = \"20\" ] && vite",
-    "build": "[ \"$(node --version | cut -c 2-3)\" = \"20\" ] && vite build",
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
