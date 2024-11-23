@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nobleknightt.github.io/contests/">nobleknightt.github.io/contests</a>
+  <a href="https://contests.ajaydandge.dev">contests.ajaydandge.dev</a>
   <br/>
   <br/>
   <img src="./screenshot.png">
